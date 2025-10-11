@@ -1,0 +1,37 @@
+@keyframes background-slideshow {
+  0%, 6.25% {
+    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(26,26,26,0.6) 25%, rgba(45,45,45,0.6) 50%, rgba(26,26,26,0.6) 75%, rgba(0,0,0,0.6) 100%),
+     url('https://source.unsplash.com/1920x1080/?priest,puja') center/cover no-repeat fixed;         
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1);
+  }
+  6.26%, 12.5% {
+    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(26,26,26,0.6) 25%, rgba(45,45,45,0.6) 50%, rgba(26,26,26,0.6) 75%, rgba(0,0,0,0.6) 100%),
+                url('https://source.unsplash.com/1920x1080/?priest,puja') center/cover no-repeat fixed;
+    transform: perspective(1000px) rotateX(1deg) rotateY(-1deg) scale(1.02);
+  }
+  12.51%, 18.75% {
+    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(26,26,26,0.6) 25%, rgba(45,45,45,0.6) 50%, rgba(26,26,26,0.6) 75%, rgba(0,0,0,0.6) 100%),
+                url('https://source.unsplash.com/1920x1080/?temple,ritual') center/cover no-repeat fixed;
+    transform: perspective(1000px) rotateX(-1deg) rotateY(1deg) scale(1.01);
+  }
+  18.76%, 25% {
+    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(26,26,26,0.6) 25%, rgba(45,45,45,0.6) 50%, rgba(26,26,26,0.6) 75%, rgba(0,0,0,0.6) 100%),
+                url('https://source.unsplash.com/1920x1080/?pooja,ceremony') center/cover no-repeat fixed;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1);
+  }
+  25.01%, 31.25% {
+    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(26,26,26,0.6) 25%, rgba(45,45,45,0.6) 50%, rgba(26,26,26,0.6) 75%, rgba(0,0,0,0.6) 100%),
+                url('https://source.unsplash.com/1920x1080/?temple,festival') center/cover no-repeat fixed;
+    transform: perspective(1000px) rotateX(1deg) rotateY(-1deg) scale(1.02);
+  }
+  /* நீங்க இன்னும் more Iyer / temple / puja images add பண்ணலாம் */
+}
+
+.hero-background {
+  animation: background-slideshow 60s linear infinite;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  perspective: 1000px;
+}
