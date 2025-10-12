@@ -74,6 +74,8 @@ const Home = () => {
         ))}
       </div>
 
+      
+
       {/* Hero Section */}
       <div className="hero-background flex items-center justify-center text-center text-white h-[90vh] relative z-10">
         <div className="max-w-6xl mx-auto px-4">

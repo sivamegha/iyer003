@@ -7,7 +7,6 @@ function AppContentWrapper() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // States
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -32,7 +31,6 @@ function AppContentWrapper() {
     }
   }, [location, navigate]);
 
-  // Scroll to section helper
   const scrollToSection = (sectionId) => {
     setIsMobileMenuOpen(false);
     if (location.pathname !== "/") {
@@ -43,7 +41,6 @@ function AppContentWrapper() {
     }
   };
 
-  // Home button click
   const handleHomeClick = () => {
     setIsMobileMenuOpen(false);
     if (location.pathname === "/") {
@@ -53,7 +50,6 @@ function AppContentWrapper() {
     }
   };
 
-  // Booking button click
   const handleBookingClick = () => {
     setIsMobileMenuOpen(false);
     navigate("/booking");
@@ -85,6 +81,9 @@ function AppContentWrapper() {
               <p className="text-xs text-amber-100/80 font-medium hidden sm:block">Sacred Services</p>
             </div>
           </div>
+
+      
+     
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-1">
@@ -120,12 +119,13 @@ function AppContentWrapper() {
       </nav>
 
       {/* Routes */}
-      <main className="flex-grow mt-[80px]">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/booking" element={<BookingForm />} />
-        </Routes>
-      </main>
+     <main className="flex-grow mt-[80px] relative z-0">
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/booking" element={<BookingForm />} />
+  </Routes>
+</main>
+
     </div>
   );
 }
